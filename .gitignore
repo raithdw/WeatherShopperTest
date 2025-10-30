@@ -1,0 +1,63 @@
+# ==========================================
+# 🧠 IntelliJ IDEA
+# ==========================================
+.idea/
+*.iml
+out/
+*.ipr
+*.iws
+
+# ==========================================
+# 🧱 Maven
+# ==========================================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# ==========================================
+# 🧪 Test Reports & Logs
+# ==========================================
+.allure/
+allure-results/
+allure-report/
+surefire-reports/
+test-output/
+logs/
+*.log
+
+# ==========================================
+# 🪣 Docker
+# ==========================================
+# Ignore volumes or environment overrides
+docker-compose.override.yml
+*.pid
+*.tar
+
+# ==========================================
+# 🔒 OS & Editor Junk
+# ==========================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# ==========================================
+# 🌤️ WeatherShopper Specific
+# ==========================================
+# Screenshots captured by Allure or Selenium
+screenshots/
+screenshots.zip
+
+# ==========================================
+# 🧰 Environment / Config
+# ==========================================
+.env
+*.env.local
+*.env.*.local
+
+
