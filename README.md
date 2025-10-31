@@ -60,6 +60,7 @@ Supports **parallel execution**, **retry on failures**, and **remote execution**
 **Local Execution**
   
     mvn clean test   # Runs all tests locally sequentially on chrome, firefox and edge by default
+    mvn clean test -Dtest=WeatherShopperTest -Dbrowser=firefox    #runs test without testng.xml in firefox only(can be change to chrome or edge)
 
 **Remote Execution on Selenium Grid**
 
