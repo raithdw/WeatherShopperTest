@@ -41,6 +41,7 @@ Supports **parallel execution**, **retry on failures**, and **remote execution**
 
 
     git clone <repository-url>
+
     cd WeatherShopperTest
 
 
@@ -57,10 +58,11 @@ Supports **parallel execution**, **retry on failures**, and **remote execution**
 
 
 ## 🏃‍♂️ Running Tests
-**Local Execution**
+**Local Execution - Tests run in headed mode by default**
   
     mvn clean test   # Runs all tests locally sequentially on chrome, firefox and edge by default
-    mvn clean test -Dtest=WeatherShopperTest -Dbrowser=firefox    #runs test without testng.xml in firefox only(can be change to chrome or edge)
+    mvn clean test -Dtest=WeatherShopperTest -Dbrowser=firefox    # Runs test without testng.xml in firefox only(can be change to chrome or edge)
+    mvn clean test -Dheadless=true  # Run test in headless mode
 
 **Remote Execution on Selenium Grid**
 
@@ -68,7 +70,7 @@ Supports **parallel execution**, **retry on failures**, and **remote execution**
 
 **Parallel Execution**
 
-    mvn clean test -Dparallel=tests -Dthread-count=3    #Run all tests in parallel with 3 threads
+    mvn clean test -Dparallel=tests -Dthread-count=3    # Run all tests in parallel with 3 threads
 
 ## 💳 Retry Failed Tests
 
@@ -81,7 +83,7 @@ Supports **parallel execution**, **retry on failures**, and **remote execution**
 
 ## 📊 Allure Reports
 
-    mvn allure taget/allure-results     #Generate and view Allure report after tests finish
+    mvn allure taget/allure-results     # Generate and view Allure report after tests finish
 
 
 **Features:**
@@ -94,7 +96,7 @@ Supports **parallel execution**, **retry on failures**, and **remote execution**
 
 ## 🏁 Author
 
-💼 Created by raithdw(Mihai Constantin)
+💼 Created by raithdw (Mihai Constantin)
 
 🔧 Built with Java + Selenium + TestNG + Allure + Docker
 
