@@ -1,7 +1,12 @@
+package ui.tests;
+
+import actions.WeatherShopperActions;
 import io.qameta.allure.*;
 import org.openqa.selenium.*;
 import org.testng.*;
 import org.testng.annotations.*;
+import setup.DriverFactory;
+import utils.RetryAnalyzer;
 
 import java.io.ByteArrayInputStream;
 

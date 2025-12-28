@@ -20,15 +20,15 @@ Supports **parallel execution**, **retry on failures**, and **remote execution**
 ---
 
 ## 🧱 Project Structure
-    WeatherShopperTest/
+    ui.tests.WeatherShopperTest/
     ├─ src/
     │  ├─ main/java/
     │  ├─ test/java/
-    │  │  ├─ DriverFactory.java
-    │  │  ├─ WeatherShopperTest.java
-    │  │  ├─ WeatherShopperActions.java
-    │  │  ├─ RetryAnalyzer.java
-    │  │  └─ RetryTransformer.java
+    │  │  ├─ setup.DriverFactory.java
+    │  │  ├─ ui.tests.WeatherShopperTest.java
+    │  │  ├─ actions.WeatherShopperActions.java
+    │  │  ├─ utils.RetryAnalyzer.java
+    │  │  └─ utils.RetryTransformer.java
     ├─ testng.xml
     ├─ pom.xml
     ├─ docker-compose.yml
@@ -42,7 +42,7 @@ Supports **parallel execution**, **retry on failures**, and **remote execution**
 
     git clone <repository-url>
 
-    cd WeatherShopperTest
+    cd ui.tests.WeatherShopperTest
 
 
 2. **Build project and download dependencies:**
@@ -61,7 +61,7 @@ Supports **parallel execution**, **retry on failures**, and **remote execution**
 **Local Execution - Tests run in headed mode by default**
   
     mvn clean test   # Runs all tests locally sequentially on chrome, firefox and edge by default
-    mvn clean test -Dtest=WeatherShopperTest -Dbrowser=firefox    # Runs test without testng.xml in firefox only(can be change to chrome or edge)
+    mvn clean test -Dtest=ui.tests.WeatherShopperTest -Dbrowser=firefox    # Runs test without testng.xml in firefox only(can be change to chrome or edge)
     mvn clean test -Dheadless=true  # Run test in headless mode
 
 **Remote Execution on Selenium Grid**
@@ -74,11 +74,11 @@ Supports **parallel execution**, **retry on failures**, and **remote execution**
 
 ## 💳 Retry Failed Tests
 
-    Automatically retries failed tests once using RetryAnalyzer + RetryTransformer.
+    Automatically retries failed tests once using utils.RetryAnalyzer + utils.RetryTransformer.
 
     Handles flaky scenarios like 5% Stripe payment failures.
 
-    @Test(description = "Shop based on temperature", retryAnalyzer = RetryAnalyzer.class)
+    @Test(description = "Shop based on temperature", retryAnalyzer = utils.RetryAnalyzer.class)
     public void shopBasedOnTemperature() { ... }
 
 ## 📊 Allure Reports
